@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         {links.map((link) => (
           <a
             key={link}
-            href={`#${link.replace(/\s+/g, '').toLowerCase()}`}
+            href={`${link.replace(/\s+/g, '').toLowerCase()}`}
             className={`relative hover:text-gray-200 w-full${
               activeLink === link ? 'text-white text-xl py-2 px-4 border-b-white border-b-4' : 'text-gray-100 text-xl py-2 px-4'
             }`}
