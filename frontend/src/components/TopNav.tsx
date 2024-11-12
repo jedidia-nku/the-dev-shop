@@ -6,7 +6,7 @@ const TopNav:React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <section>
-      <div className="flex justify-between pt-5 mx-32">
+      <div className="flex justify-between pt-5 px-32">
         <div className='w-[28%]'>
         <img src="./logo.png" alt="" />
         </div>
