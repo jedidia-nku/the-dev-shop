@@ -13,13 +13,13 @@ const ContactSection: React.FC = () => {
     <section>
 
     
-    <div className="relative bg-cover bg-center h-[58vh] text-white" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
+    <div className="relative bg-cover bg-center h-[45vh] text-white" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
     {/* Overlay */}
     <div className="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
           {/* Content */}
           <div className="relative flex flex-col pt-10 gap-4 h-full px-4 text-center">
           <h1 className="text-5xl font-light">Contact Us</h1>
-          <p className="text-xl font-light mt-2">HOW CAN WE HELP?</p>
+          <p className="text-2xl font-md mt-2">HOW CAN WE HELP?</p>
       </div>
     </div>
     <div className="relative flex justify-center h-[90vh] bg-gray-100 py-16">

@@ -39,16 +39,16 @@ const AboutUs: React.FC = () => {
     <>
     <TopNav />
     <Navbar />
-    <section className="relative bg-cover bg-center h-[58vh] text-white" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
+    <section className="relative bg-cover bg-center h-[60vh] text-white" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
     {/* Overlay */}
     <div className="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
       
       {/* Content */}
-      <div className="relative flex flex-col items-center -bottom-20 justify-center h-full px-4 text-center">
+      <div className="relative flex flex-col items-center -bottom-28 justify-center h-full px-4 text-center">
         <div className="text-center mx-auto">
           <img src="/footer/logo.png" alt="Logo" className="items-center p-2 rounded-full w-20 h-20  bg-white mb-4 mx-auto" />
           </div>
-          <h1 className="text-4xl font-bold">The <span className="text-yellow-500">Dev</span> Shop</h1>
+          <h1 className="text-4xl font-sm my-2">The Dev Shop</h1>
           <p className="text-lg font-sm mt-2">
             WE <span className='text-yellow-600 '>DESIGN, BUILD, AND DEPLOY</span> SOFTWARE PRODUCTS AND SOLUTIONS.
           </p>

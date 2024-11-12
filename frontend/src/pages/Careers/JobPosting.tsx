@@ -1,4 +1,5 @@
 import React from 'react';
+import { SiRocket } from "react-icons/si";
 
 interface JobPostingProps {
   title: string;
@@ -10,8 +11,8 @@ interface JobPostingProps {
 
 const JobPosting: React.FC<JobPostingProps> = ({ title, location, type, qualifications, responsibilities }) => {
   return (
-    <div className="bg-white p-6 shadow-lg rounded-md mb-6">
-      <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+    <div className="bg-white px-6">
+      <h3 className="text-3xl font-thin text-gray-600 py-6">{title}</h3>
       <p className="text-gray-500">{location} - {type}</p>
 
       <div className="mt-4">
@@ -32,7 +33,9 @@ const JobPosting: React.FC<JobPostingProps> = ({ title, location, type, qualific
         </ul>
       </div>
 
-      <button className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">Apply Now</button>
+      <button className="mt-8 px-6 py-1 flex gap-3 py-2 items-center bg-cyan-500 text-white rounded-sm font-md hover:bg-cyan-400">
+         <SiRocket className='' style={{ transform: "rotate(47deg)" }}/> APPLY NOW
+        </button>
     </div>
   );
 };

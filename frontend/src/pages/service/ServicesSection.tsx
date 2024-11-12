@@ -8,6 +8,7 @@ import { LuBookOpen } from "react-icons/lu";
 import { ImMobile2 } from "react-icons/im";
 import { FaEye } from "react-icons/fa";
 import { FaCloud } from "react-icons/fa";
+import { SiRocket } from 'react-icons/si';
 
 
 const ServicesSection: React.FC = () => {
@@ -15,7 +16,8 @@ const ServicesSection: React.FC = () => {
     <>
     <TopNav />
     <Navbar />
-    <section className='relative mb-4 shadow-lg flex  items-center justify-center h-[100vh] bg-cover bg-center' style={{ backgroundImage: "url('/service-image/bg-service.jpg')"}}>
+    <section >
+    <div className='relative mb-4 shadow-lg flex  items-center justify-center h-[100vh] bg-cover bg-center' style={{ backgroundImage: "url('/service-image/bg-service.jpg')"}}>
       <div className="absolute inset-0 bg-footerColor opacity-90"></div>
       <div className="absolute text-white">
       <div className="mx-12 mx-auto px-4 text-center">
@@ -78,13 +80,14 @@ const ServicesSection: React.FC = () => {
           </div>
         </div>
         </div>
-        <button className="mt-8 px-6 py-1 bg-cyan-500 text-white rounded-sm font-md hover:bg-cyan-400">
-          I HAVE A PROJECT
+        <button className="mt-8 px-6 flex gap-3 py-2 items-center bg-cyan-500 text-white rounded-sm font-md hover:bg-cyan-400">
+         <SiRocket className='' style={{ transform: "rotate(47deg)" }}/> I HAVE A PROJECT
         </button>
       </div>
       </div>
-    </section>
+      </div>
     <Footer />
+    </section>
     </>
   );
 };
