@@ -1,0 +1,36 @@
+.animated-link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .animated-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: white;
+    transition: height 0.3s ease;
+    z-index: -1;
+  }
+  
+  .animated-link:hover::before {
+    height: 100%; /* Animate from bottom to top */
+  }
+  
+  .animated-link:hover {
+    color: #3b82f6;
+  }
+  .slide-down-enter {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .slide-down-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  

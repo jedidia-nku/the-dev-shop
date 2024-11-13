@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="bg-white h-[100vh] p-8 shadow-lg rounded-md border-b-4 border-b-blue-600 border border-gray-300">
+    <div className="bg-white p-8 shadow-lg rounded-md border-b-4 border-b-blue-600 border border-gray-300">
       
       <form className="space-y-4 mb-12">
         <div>

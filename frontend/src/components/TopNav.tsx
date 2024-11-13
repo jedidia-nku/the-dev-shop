@@ -5,7 +5,7 @@ import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 const TopNav:React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <section>
+    <section className='hidden lg:block'>
       <div className="flex justify-between pt-5 px-32">
         <div className='w-[28%]'>
         <img src="./logo.png" alt="" />
@@ -15,9 +15,9 @@ const TopNav:React.FC = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         >
-            <IoShareSocial className='text-4xl text-blue-700 font-bold cursor-pointer hover:bg-blue-700 transition-colors font-bold cursor-pointer btn-circle btn-circle-primary animated zoomInDown animation-delay-7 transition-colors hover:text-white p-2 duration-500'/>
+            <IoShareSocial className='rounded-full text-5xl text-blue-700 font-bold cursor-pointer hover:bg-blue-700 transition-colors font-bold cursor-pointer btn-circle btn-circle-primary animated zoomInDown animation-delay-7 transition-colors hover:text-white p-3 duration-500'/>
       <div 
-        className={`absolute right-24 flex gap-6 transform transition-transform duration-1000 ${
+        className={`absolute right-24 flex top-2 gap-6 transform transition-transform duration-500 ${
           isHovered ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >

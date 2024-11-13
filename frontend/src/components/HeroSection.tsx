@@ -4,10 +4,11 @@ import { MdAirplanemodeActive } from "react-icons/md";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative flex items-center justify-center h-[80vh] bg-contain bg-center" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
+    <div className="relative flex flex-col px-4 lg:flex-row items-center justify-evenly h-auto bg-contain bg-center" 
+    style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
       {/* Overlay */}
       <motion.div 
-        className="absolute inset-0 bg-white opacity-80" 
+        className="absolute inset-0 bg-white opacity-90" 
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.8 }}
         transition={{ duration: 1 }}
@@ -42,35 +43,52 @@ const HeroSection: React.FC = () => {
       
       {/* Smartphone Images */}
       <motion.div 
-        className="relative flex bg-black my-12 gap-4"
+        className="relative flex my-12 items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <motion.img
-          src="/hero-images/image-1.png"
-          alt="App screen 1"
-          className="h-80 bg-blue-500"
-          initial={{ x: -50, opacity: 0 }}
+        {/* Left Image */}
+        <motion.div
+          className="relative "
+          initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-        />
-        <motion.img
-          src="/hero-images/image-2.png"
-          alt="App screen 2"
-          className="h-80 z-10"
-          initial={{ y: -50, opacity: 0 }}
+        >
+          <img
+            src="/hero-images/image-2.png"
+            alt="App screen 1"
+            className="h-full shadow-lg"
+          />
+        </motion.div>
+
+        {/* Center Image */}
+        <motion.div
+          className="relative z-10  -ml-16"  // Add a negative margin to center it above others
+          initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.4 }}
-        />
-        <motion.img
-          src="/hero-images/image-3.png"
-          alt="App screen 3"
-          className="h-80 bg-blue-500"
-          initial={{ x: 50, opacity: 0 }}
+        >
+          <img
+            src="/hero-images/image-3.png"
+            alt="App screen 3"
+            className="h-full shadow-lg"
+          />
+        </motion.div>
+
+        {/* Right Image */}
+        <motion.div
+          className="relative -ml-16 "
+          initial={{ x: 30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.6 }}
-        />
+        >
+          <img
+            src="/hero-images/image-1.png"
+            alt="App screen 2"
+            className="h-full shadow-lg"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );

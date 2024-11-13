@@ -41,7 +41,7 @@ const AboutUs: React.FC = () => {
     <>
     <TopNav />
     <Navbar />
-      <section className="relative bg-cover bg-center h-[60vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}> 
+      <section className="relative bg-cover bg-center h-[32vh] lg:h-[60vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}> 
     {/* Overlay */}
     <div className="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
     
@@ -56,9 +56,9 @@ const AboutUs: React.FC = () => {
       </p>
 
       {/* About Section */}
-      <div className="relative bg-white text-gray-800 mt-12 px-6 py-12 rounded-sm shadow-b-lg border border-b-gray-400 max-w-[85%] mx-auto text-left animate-fadeIn">
-        <h2 className="text-4xl font-light text-color1 mb-4">About Us</h2>
-        <div className="text-gray-500 grid sm:grid-col-1 md:grid-cols-2 gap-2 animate-slideIn">
+      <div className="relative bg-white text-gray-800 mt-12 px-6 py-4 lg:py-12 rounded-sm shadow-b-lg border border-b-gray-400 max-w-[85%] mx-auto text-left animate-fadeIn">
+        <h2 className="text-2xl lg:text-4xl font-light text-color1 mb-4">About Us</h2>
+        <div className="text-gray-500 grid grid-col-1 text-sm lg:text-md lg:grid-cols-2 gap-2 animate-slideIn">
           <p>
           <div className='flex items-center align-center'>
             <h1 className="first-letter:text-4xl first-letter:font-sm first-letter:text-blue-500 first-letter:leading-[0.8] first-letter:mr-2 text-gray-500">W</h1> 

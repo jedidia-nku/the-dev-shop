@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MobileSidebar } from './MobileSidebar';
+import './../../globals.css'
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -32,12 +33,12 @@ const Navbar: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="sticky top-0 bg-blue-500 z-50 text-white shadow-lg">
+    <nav className="sticky top-0 bg-blue-600 z-50 text-white shadow-lg">
       <div className="container mx-auto flex justify-end lg:justify-start items-center pl-24">
 
         {/* Mobile Menu Toggle */}
         <button
-          className="text-white lg:hidden my-2"
+          className="text-white lg:hidden my-2 pr-4"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -68,7 +69,7 @@ const Navbar: React.FC = () => {
               activeLink === 'Home'
                 ? 'text-white text-xl py-2 px-4 border-b-4 border-white'
                 : 'text-gray-100 text-xl py-2 px-4'
-            }`}
+            } animated-link`}
             onClick={() => setActiveLink('Home')}
           >
             Home
@@ -79,7 +80,7 @@ const Navbar: React.FC = () => {
               activeLink === 'Services'
                 ? 'text-white text-xl py-2 px-4 border-b-4 border-white'
                 : 'text-gray-100 text-xl py-2 px-4'
-            }`}
+            } animated-link`}
             onClick={() => setActiveLink('Services')}
           >
             Services
@@ -90,7 +91,7 @@ const Navbar: React.FC = () => {
               activeLink === 'About'
                 ? 'text-white text-xl py-2 px-4 border-b-4 border-white'
                 : 'text-gray-100 text-xl py-2 px-4'
-            }`}
+            } animated-link`}
             onClick={() => setActiveLink('About')}
           >
             About Us
@@ -101,7 +102,7 @@ const Navbar: React.FC = () => {
               activeLink === 'Contact'
                 ? 'text-white text-xl py-2 px-4 border-b-4 border-white'
                 : 'text-gray-100 text-xl py-2 px-4'
-            }`}
+            } animated-link`}
             onClick={() => setActiveLink('Contact')}
           >
             Contact Us
@@ -112,7 +113,7 @@ const Navbar: React.FC = () => {
               activeLink === 'Careers'
                 ? 'text-white text-xl py-2 px-4 border-b-4 border-white'
                 : 'text-gray-100 text-xl py-2 px-4'
-            }`}
+            } animated-link`}
             onClick={() => setActiveLink('Careers')}
           >
             Careers

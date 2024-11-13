@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'slide-down': 'slide-down 0.5s ease-in-out',
+      },
+      keyframes: {
+        'slide-down': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+      },
       boxShadow: {
         'bottom-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.3)',
       },

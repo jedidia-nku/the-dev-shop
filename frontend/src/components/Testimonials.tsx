@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => {
           <img
             src="/Testimonials/egan.jpg"
             alt="Kaelon Egan"
-            className="relative w-20 h-20 rounded-full top-10 left-2"
+            className="relative w-20 h-20 rounded-full top-10 left-2 hover:animate-zoomIn"
           />
           <div className="bg-white text-gray-500 px-2 py-10 rounded-sm shadow-lg w-80">
             <p className="italic text-md ml-12 mb-4">
@@ -59,7 +59,7 @@ const Testimonials: React.FC = () => {
           <img
             src="/Testimonials/janis.jpg"
             alt="Jimmy Janis"
-            className="relative w-20 h-20 rounded-full top-10 left-2"
+            className="relative w-20 h-20 rounded-full top-10 left-2 hover:animate-zoomIn"
           />
           <div className="bg-white text-gray-500 px-2 py-10 rounded-sm shadow-lg w-80">
             <p className="italic text-md ml-12 mb-4">
@@ -84,7 +84,7 @@ const Testimonials: React.FC = () => {
           <img
             src="/Testimonials/boykin.jpg"
             alt="TJ Boykin"
-            className="relative w-20 h-20 rounded-full top-10 left-2"
+            className="relative w-20 h-20 rounded-full top-10 left-2 hover:animate-zoomIn"
           />
           <div className="bg-white text-gray-500 px-2 py-10 rounded-sm shadow-lg w-80">
             <p className="italic text-md ml-20 text-sm mb-4">

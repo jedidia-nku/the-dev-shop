@@ -10,19 +10,19 @@ const CareersSection: React.FC = () => {
     <>
     <TopNav />
     <Navbar />
-    <section className="relative bg-cover bg-center h-[50vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
+    <section className="relative bg-cover bg-center h-[28vh] lg:h-[50vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}>
     {/* Overlay */}
     <div className="absolute inset-0 bg-gray-800 bg-opacity-80 animate-fadeIn"/>
           {/* Content */}
-          <div className="relative flex flex-col items-center pt-20 h-full px-4 text-center animate-slideIn">
+          <div className="relative flex flex-col items-center pt-8 lg:pt-20 h-full px-4 text-center animate-slideIn">
           <h1 className="text-5xl font-sm my-2 animate-bounceOnHover">Careers</h1>
           <p className="text-lg font-md mt-2 animate-zoomIn">
             WE DESIGN, BUILD, AND DEPLOYSOFTWARE PRODUCTS AND SOLUTIONS.
           </p>
       </div>
 
-      <div className="relative max-w-6xl mx-auto my-auto px-4 md:flex md:space-x-8">
-        <div className="relative md:w-2/3 space-y-8 -top-20 shadow-lg rounded-md border border-gray-300 border-b-4 border-b-blue-600 pb-6 animate-fadeIn">
+      <div className="relative max-w-3xl lg:max-w-6xl mx-auto my-auto px-4 lg:flex lg:space-x-8">
+        <div className="relative lg:w-2/3 space-y-8 -top-20 shadow-lg rounded-md lg:border lg:border-gray-300 lg:border-b-4 lg:border-b-blue-600 pb-6 animate-fadeIn">
           
           {/* Sample Job Postings */}
           <JobPosting
@@ -57,7 +57,7 @@ const CareersSection: React.FC = () => {
           />
         </div>
 
-        <div className="relative md:w-2/5 -top-20 animate-slideIn">
+        <div className="relative lg:w-2/5 -top-20 animate-slideIn">
           <ContactForm />
         </div>
       </div>

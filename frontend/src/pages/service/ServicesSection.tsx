@@ -16,11 +16,11 @@ const ServicesSection: React.FC = () => {
     <>
     <TopNav />
     <Navbar />
-    <section  className='relative shadow-lg flex mb-4 h-[120vh] bg-cover bg-center animate-fadeIn' 
+    <section  className='relative shadow-lg flex mb-4 h-[140vh] md:h-[70vh] lg:h-[120vh] bg-cover bg-center animate-fadeIn' 
     style={{ backgroundImage: "url('/service-image/bg-service.jpg')"}}>
       <div className="absolute inset-0 bg-footerColor opacity-90"></div>
       <div className="absolute text-white">
-      <div className="mx-12 px-4 text-center animate-slideIn">
+      <div className="lg:mx-12 px-4 text-center animate-slideIn">
         <h2 className="text-4xl font-sm text-cyan-400 mt-12 mb-8">Services</h2>
         <p className="mt-2 text-gray-300 text-2xl font-light">Stop in at the shop.</p>
         <p className="mt-2 text-gray-300 text-2xl font-light">See how we can help you with your next project.</p>
