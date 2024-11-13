@@ -29,7 +29,7 @@ export const MobileSidebar = ({
 	isOpen: boolean;
 	onClose: () => void;
 }) => {
-	const sidebarClasses = `flex flex-col fixed inset-y-0 left-0 z-50 top-0 bottom-0 w-[80%] md:w-[60%] overflow-y-auto h-[100%] bg-gray-100 transform transition-transform text-black ${
+	const sidebarClasses = `flex flex-col fixed inset-y-0 left-0 z-50 top-0 bottom-0 w-[80%] md:w-[60%] overflow-y-auto h-screen bg-gray-100 transform transition-transform text-black ${
 		isOpen ? "translate-x-0" : "-translate-x-full"
 	}`;
 	const overlayClasses = `fixed top-0 inset-0 bg-[rgba(0,0,0,0.5)] z-40 transition-opacity overflow-hidden ${

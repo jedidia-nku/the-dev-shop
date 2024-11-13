@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import TopNav from '../../components/TopNav';
 import { FaDollarSign } from "react-icons/fa6";
@@ -9,14 +9,50 @@ import { FaEye } from "react-icons/fa";
 import { FaCloud } from "react-icons/fa";
 import { SiRocket } from 'react-icons/si';
 import Footer from '../../components/Footer';
+import Navbar2 from '../../components/Navbar2';
 
 
 const ServicesSection: React.FC = () => {
+  const [showNavbar2, setShowNavbar2] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show Navbar2 on large screens when scrolled down 100px, otherwise hide
+      if (window.innerWidth >= 1024 && window.scrollY > 100) {
+        setShowNavbar2(true);
+      } else if (window.innerWidth >= 1024) {
+        setShowNavbar2(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    // Clean up the event listeners on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-    <TopNav />
-    <Navbar />
-    <section  className='relative shadow-lg flex mb-4 h-[140vh] md:h-[70vh] lg:h-[120vh] bg-cover bg-center animate-fadeIn' 
+      <TopNav />
+
+      {/* Navbar1 - Visible only on large screens, hidden on scroll */}
+      <div className={`block transition-opacity duration-500 ${showNavbar2 ? 'opacity-0' : 'opacity-100'}`}>
+        <Navbar />
+      </div>
+
+      {/* Navbar2 - Always visible on medium and small screens; on large screens only when scrolled */}
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 transform transition-all duration-500 ease-out 
+          ${showNavbar2 || window.innerWidth < 1024 ? 'translate-y-0 opacity-100' : 'translate-y-[-100%] opacity-0'} 
+          ${window.innerWidth >= 1024 ? 'lg:block' : 'block'}`}
+      >
+        <Navbar2 />
+      </div>
+    <section  className='relative shadow-lg flex mb-4 h-[145vh] md:h-[70vh] lg:h-[120vh] bg-cover bg-center animate-fadeIn' 
     style={{ backgroundImage: "url('/service-image/bg-service.jpg')"}}>
       <div className="absolute inset-0 bg-footerColor opacity-90"></div>
       <div className="absolute text-white">

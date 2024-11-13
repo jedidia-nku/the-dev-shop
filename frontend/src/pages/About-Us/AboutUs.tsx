@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TopNav from '../../components/TopNav';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { FaChevronDown } from "react-icons/fa";
 import { FaRegLightbulb } from "react-icons/fa6";
+import Navbar2 from '../../components/Navbar2';
 
 interface TeamMember {
   name: string;
@@ -32,15 +33,50 @@ const teamMembers: TeamMember[] = [
 const AboutUs: React.FC = () => {
     // State for the accordion
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [showNavbar2, setShowNavbar2] = useState(false);
 
     // Toggle accordion items
     const toggleAccordion = (index: number) => {
       setOpenIndex(openIndex === index ? null : index);
     };
-  return (
-    <>
-    <TopNav />
-    <Navbar />
+
+    useEffect(() => {
+      const handleScroll = () => {
+        // Show Navbar2 on large screens when scrolled down 100px, otherwise hide
+        if (window.innerWidth >= 1024 && window.scrollY > 100) {
+          setShowNavbar2(true);
+        } else if (window.innerWidth >= 1024) {
+          setShowNavbar2(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+  
+      // Clean up the event listeners on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', handleScroll);
+      };
+    }, []);
+  
+    return (
+      <>
+        <TopNav />
+  
+        {/* Navbar1 - Visible only on large screens, hidden on scroll */}
+        <div className={`block transition-opacity duration-500 ${showNavbar2 ? 'opacity-0' : 'opacity-100'}`}>
+          <Navbar />
+        </div>
+  
+        {/* Navbar2 - Always visible on medium and small screens; on large screens only when scrolled */}
+        <div
+          className={`fixed top-0 left-0 right-0 z-50 transform transition-all duration-500 ease-out 
+            ${showNavbar2 || window.innerWidth < 1024 ? 'translate-y-0 opacity-100' : 'translate-y-[-100%] opacity-0'} 
+            ${window.innerWidth >= 1024 ? 'lg:block' : 'block'}`}
+        >
+          <Navbar2 />
+        </div>
       <section className="relative bg-cover bg-center h-[32vh] lg:h-[60vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}> 
     {/* Overlay */}
     <div className="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
@@ -57,8 +93,8 @@ const AboutUs: React.FC = () => {
 
       {/* About Section */}
       <div className="relative bg-white text-gray-800 mt-12 px-6 py-4 lg:py-12 rounded-sm shadow-b-lg border border-b-gray-400 max-w-[85%] mx-auto text-left animate-fadeIn">
-        <h2 className="text-2xl lg:text-4xl font-light text-color1 mb-4">About Us</h2>
-        <div className="text-gray-500 grid grid-col-1 text-sm lg:text-md lg:grid-cols-2 gap-2 animate-slideIn">
+        <h2 className="text-xl lg:text-4xl font-light text-color1 mb-4">About Us</h2>
+        <div className="text-gray-500 grid grid-col-1 text-xs lg:text-md lg:grid-cols-2 gap-2 animate-slideIn">
           <p>
           <div className='flex items-center align-center'>
             <h1 className="first-letter:text-4xl first-letter:font-sm first-letter:text-blue-500 first-letter:leading-[0.8] first-letter:mr-2 text-gray-500">W</h1> 

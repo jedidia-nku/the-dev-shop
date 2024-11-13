@@ -35,11 +35,11 @@ const Navbar2: React.FC = () => {
   return (
     <nav className="sticky top-0 bg-blue-600 z-50 text-white shadow-lg">
         <div className='flex items-center justify-between lg:justify-center'>
-            <div className='w-2/3'>
+            <div className='w-full md:w-2/3'>
         <Link
             to="/"
             className= "flex gap-4 justify-center items-center">
-            <img src="/footer/logo.png" alt="" className='h-12 w-12 p-1.5'/> <h1 className='text-2xl font-light'>The <span className='font-md'> DevShop</span></h1>
+            <img src="/footer/logo.png" alt="" className='h-12 w-12 p-1.5'/> <h1 className='md:text-2xl font-light'>The <span className='font-md'> DevShop</span></h1>
           </Link>
           </div>
           

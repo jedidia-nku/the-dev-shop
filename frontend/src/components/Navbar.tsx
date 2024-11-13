@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="text-white lg:hidden my-2 pr-4"
+          className="text-white lg:hidden my-2 lg:pr-4"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
