@@ -88,4 +88,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact  
 For further inquiries or support, feel free to reach out:  
 - **Email:** [support@thedevshop.com](mailto:support@thedevshop.com)  
-- **Website:** [The Dev Shop](https://the-dev-shop-v1.vercel.app/)  
+- **Website:** [The Dev Shop](https://the-dev-shop-v3.vercel.app/)  
