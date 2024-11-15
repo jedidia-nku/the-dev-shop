@@ -53,9 +53,9 @@ const ContactSection: React.FC = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
         {/* Content */}
-        <div className="relative flex flex-col items-center pt-8 lg:pt-20 h-full px-4 text-center animate-slideIn">
-          <h1 className="text-5xl font-light animate-zoomIn">Contact Us</h1>
-          <p className="text-2xl font-md mt-2">HOW CAN WE HELP?</p>
+        <div className="relative flex flex-col items-center justify-start pt-8 md:pt-1 md:justify-center h-full px-4 text-center animate-slideIn">
+          <h1 className="text-2xl md:text-5xl font-light animate-zoomIn">Contact Us</h1>
+          <p className="text-lg md:text-2xl font-md mt-2">HOW CAN WE HELP?</p>
         </div>
 
         <div className="relative max-w-3xl lg:max-w-6xl mx-auto my-auto px-4 lg:flex lg:space-x-8">

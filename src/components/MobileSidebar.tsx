@@ -56,7 +56,7 @@ export const MobileSidebar = ({
 			>
 				<div className="flex-shrink-0 sticky top-0 left-0 flex justify-between items-center z-20 bg-primary py-2 px-1">
 					<MdClose
-						className="text-white w-6 h-6 opacity-80"
+						className="absolute text-gray-600 right-6 top-4 w-6 h-6 opacity-80"
 						onClick={onClose}
 					/>
 				</div>

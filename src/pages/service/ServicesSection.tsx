@@ -52,10 +52,10 @@ const ServicesSection: React.FC = () => {
       >
         <Navbar2 />
       </div>
-    <section  className='relative shadow-lg flex mb-4 h-[145vh] md:h-[70vh] lg:h-[120vh] bg-cover bg-center animate-fadeIn' 
+    <section  className='relative shadow-lg flex mb-4 bg-cover bg-center animate-fadeIn' 
     style={{ backgroundImage: "url('/service-image/bg-service.jpg')"}}>
-      <div className="absolute inset-0 bg-footerColor opacity-90"></div>
-      <div className="absolute text-white">
+      <div className="bg-footerColor opacity-90">
+      <div className="text-white">
       <div className="lg:mx-12 px-4 text-center animate-slideIn">
         <h2 className="text-4xl font-sm text-cyan-400 mt-12 mb-8">Services</h2>
         <p className="mt-2 text-gray-300 text-2xl font-light">Stop in at the shop.</p>
@@ -118,11 +118,14 @@ const ServicesSection: React.FC = () => {
         </div>
 
       </div>
-      <div className='absolute w-full flex justify-center mt-6'>
-      <button className="px-6 flex gap-3 py-2 items-center bg-cyan-500 text-white rounded-sm font-md hover:bg-cyan-400 hover:animate-bounceOnHover">
+      <div className='w-full flex justify-center my-12'>
+      <a
+      href='/contact'
+       className="px-6 flex gap-3 py-2 items-center bg-cyan-500 text-white rounded-sm font-md hover:bg-cyan-400 hover:animate-bounceOnHover">
          <SiRocket className='' style={{ transform: "rotate(47deg)" }}/> I HAVE A PROJECT
-        </button>
+        </a>
         </div>
+      </div>
       </div>
       </section>
     <Footer />

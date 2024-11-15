@@ -27,6 +27,7 @@ const HeroSection: React.FC = () => {
 
         {/* Button */}
         <motion.a
+        href='/contact'
           className="mt-6 px-6 flex gap-2 items-center py-3 bg-white text-blue-600 font-md text-md rounded-sm shadow-lg cursor-pointer"
           initial={{ scale: 0.9 }}
           animate={{ scale: 1 }}

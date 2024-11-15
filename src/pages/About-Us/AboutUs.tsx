@@ -77,24 +77,28 @@ const AboutUs: React.FC = () => {
         >
           <Navbar2 />
         </div>
-      <section className="relative bg-cover bg-center h-[32vh] lg:h-[60vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}> 
+      <section className="relative bg-cover bg-center h-[32vh] lg:h-[50vh] text-white animate-fadeIn" style={{ backgroundImage: "url('/hero-images/bg-image.jpg')" }}> 
     {/* Overlay */}
     <div className="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
     
     {/* Content */}
-    <div className="relative flex flex-col items-center -bottom-32 justify-center h-full px-4 text-center animate-slideIn">
-      <div className="text-center p-2 rounded-full w-20 h-20 bg-white">
-        <img src="/footer/logo.png" alt="Logo" className="items-center p-2 mb-4 mx-auto animate-zoomIn" />
+    <div className="relative flex flex-col items-center h-full px-4 justify-center lg:justify-start lg:pt-8 text-center animate-slideIn">
+      <div className="text-center p-2 rounded-full w-16 h-16 lg:w-20 lg:h-20 bg-white">
+        <img src="/footer/logo.png" alt="Logo" className="items-center p-1 md:p-2 mb-4 mx-auto animate-zoomIn" />
       </div>
-      <h1 className="text-4xl font-sm my-2">The Dev Shop</h1>
-      <p className="text-lg font-sm mt-2">
+      <h1 className="text-xl md:text-2xl lg:text-4xl font-sm my-2">The Dev Shop</h1>
+      <p className="text-sm md:text-base lg:text-lg font-sm mt-2">
         WE <span className="text-yellow-600">DESIGN, BUILD, AND DEPLOY</span> SOFTWARE PRODUCTS AND SOLUTIONS.
       </p>
+    </div>
+      </section>
 
+      <section className="max-w-6xl mx-auto p-8 text-gray-700 animate-fadeIn">
+        
       {/* About Section */}
-      <div className="relative bg-white text-gray-800 mt-12 px-6 py-4 lg:py-12 rounded-sm shadow-b-lg border border-b-gray-400 max-w-[85%] mx-auto text-left animate-fadeIn">
+      <div className="relative bg-white text-gray-800 -top-16 md:-top-28 px-6 py-2 lg:py-12 rounded-sm shadow-b-lg border border-b-gray-400 max-w-[85%] mx-auto text-left animate-fadeIn">
         <h2 className="text-xl lg:text-4xl font-light text-color1 mb-4">About Us</h2>
-        <div className="text-gray-500 grid grid-col-1 text-xs lg:text-md lg:grid-cols-2 gap-2 animate-slideIn">
+        <div className="text-gray-500 grid grid-col-1 text-xs md:text-base lg:grid-cols-2 gap-2 animate-slideIn">
           <p>
           <div className='flex items-center align-center'>
             <h1 className="first-letter:text-4xl first-letter:font-sm first-letter:text-blue-500 first-letter:leading-[0.8] first-letter:mr-2 text-gray-500">W</h1> 
@@ -112,10 +116,6 @@ const AboutUs: React.FC = () => {
           </p>
         </div>
       </div>
-    </div>
-      </section>
-
-      <section className="max-w-6xl mx-auto mt-52 p-8 text-gray-700 animate-fadeIn">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Our Team Section */}
           <div>
